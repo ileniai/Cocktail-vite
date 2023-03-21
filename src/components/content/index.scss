@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+.Content{
+    @include flex-container( row, center, center, 70px, wrap);
+    /*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;*/
+}

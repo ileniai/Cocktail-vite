@@ -1,0 +1,107 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.GeneralModal {
+    @include flex-container;
+    position: fixed;
+    width: 650px;
+    height: 450px;
+    background-color: $secondary-color;
+    border-radius: 18px;
+    top: 230px;
+    left: calc(48% - 300px);
+
+  &__text {
+    @include flex-container(column, center, center);
+    width: 50%;
+    height: 100%;
+    padding: 0 15px;
+    color:$primary-color;
+
+   .GeneralModal__text--title{
+    margin-top: 0;
+    font-family: $first_fonts;
+   }
+
+   .GeneralModal__text--name{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+   }
+
+   .GeneralModal__text--glass{
+    font-weight: bold;
+   }
+
+   .GeneralModal__text--subtitle{
+    display: flex;
+    justify-content: space-evenly;
+   }
+
+    &--lists {
+      width: 100%;
+      @include flex-container(row, space-around);
+
+      .GeneralModal__text--ul1{
+        width: 100px;
+        padding-left:0px;
+        justify-content: space-evenly;
+      }
+      .GeneralModal__text--ul2{
+        width: 180px;
+        height: 140px;
+        justify-content: space-evenly;
+        padding-left:16px;
+      }
+
+      li { 
+        padding: 2px;
+        list-style-type: none;
+      }     
+    }
+  }
+
+  &_close{
+    border:none;
+    background:none;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+  }
+
+  &__image {
+    width: 48%;
+    height: 99%;
+
+    img { 
+      width: 100%;
+      height: 450px;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+      object-fit: cover;
+    }
+
+
+    &--carousel button {
+      padding: 22px 0;
+      width: 50%;
+      height: 100%;
+      border: 0;
+      background-color: $active-color;
+      color: $secondary-color;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.35s;
+      transform: translateY(-63px);
+      
+
+      &:hover {
+        background-color: $active-color_deep;
+        transform: scale(1.1) translateY(-57.5px);
+      }
+    }
+  }
+}
