@@ -1,5 +1,4 @@
-
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Card = ({ data, setGeneralModalContext}) => {
 
@@ -11,15 +10,15 @@ const Card = ({ data, setGeneralModalContext}) => {
   }));
 
   return (
-    <div className="Card">
+    <div className={styles.Card}>
       <img src={data.strDrinkThumb} alt={data.strDrink} />
-      <div className="Card__text">
-        <h2 className="Card__text-title">{data.strDrink}</h2>
+      <div className={styles.text}>
+        <h2 className={styles.titleText}>{data.strDrink}</h2>
         <ul>
           <li>{data.strIngredient1}</li>
           <li>{data.strIngredient2}</li>
           <li>{data.strIngredient3}</li>
-          <button onClick={onHandbtnleClick} className="Card_btn">Instructions</button>
+          <button onClick={onHandbtnleClick} className={styles.btn}>Instructions</button>
          
         </ul>
       </div>

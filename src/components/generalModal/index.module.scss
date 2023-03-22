@@ -4,50 +4,50 @@
 .GeneralModal {
     @include flex-container;
     position: fixed;
-    width: 650px;
-    height: 450px;
+    width: 550px;
+    height: 465px;
     background-color: $secondary-color;
     border-radius: 18px;
     top: 230px;
-    left: calc(48% - 300px);
+    left: calc(48% - 250px);
 
-  &__text {
+    .text {
     @include flex-container(column, center, center);
-    width: 50%;
+    width: 45%;
     height: 100%;
     padding: 0 15px;
     color:$primary-color;
 
-   .GeneralModal__text--title{
+    .titleText{
     margin-top: 0;
     font-family: $first_fonts;
    }
 
-   .GeneralModal__text--name{
+   .categoryName{
     font-size: 1.3rem;
     font-weight: bold;
 
    }
 
-   .GeneralModal__text--glass{
+   .typeGlass{
     font-weight: bold;
    }
 
-   .GeneralModal__text--subtitle{
+   .subtitle{
     display: flex;
     justify-content: space-evenly;
    }
 
-    &--lists {
+   .textList{
       width: 100%;
       @include flex-container(row, space-around);
 
-      .GeneralModal__text--ul1{
+      .textListUl{
         width: 100px;
         padding-left:0px;
         justify-content: space-evenly;
       }
-      .GeneralModal__text--ul2{
+      .textListUl2{
         width: 180px;
         height: 140px;
         justify-content: space-evenly;
@@ -61,7 +61,7 @@
     }
   }
 
-  &_close{
+  .btnClose{
     border:none;
     background:none;
     position: absolute;
@@ -69,23 +69,28 @@
     left: 10px;
     font-size: 1.3rem;
     cursor: pointer;
+    transition: transform 1.5s;
+
+    &:hover{
+      transform: scaleX(-1);
+    }
 
   }
 
-  &__image {
-    width: 48%;
+  .image {
+    width: 50%;
     height: 99%;
 
     img { 
       width: 100%;
-      height: 450px;
+      height: 465px;
       border-top-right-radius: 18px;
       border-bottom-right-radius: 18px;
       object-fit: cover;
     }
 
 
-    &--carousel button {
+    .carouselBtn button {
       padding: 22px 0;
       width: 50%;
       height: 100%;

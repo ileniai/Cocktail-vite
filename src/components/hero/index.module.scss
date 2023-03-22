@@ -1,27 +1,30 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/variables";
 
-.Hero {
+.Hero{
   @include simple-flex;
   /*border:2px solid rgb(248, 247, 247);
   display: flex;
   flex-direction: column;
   align-items: center;*/
 
-  &__space {
+  .spaceList {
     width: 80%;
     border: 0;
     border-bottom: 1px dotted #e6e6e6;
     border-width: 4px;
   }
 
-  &__title {
-    font-size: 3rem;
+  .title {
+    position: absolute;
+    font-size: 3.6rem;
     font-family: $first_fonts;
     margin-bottom: 0;
+    transform: translateY(-300px);
+
   }
 
-  .Hero__first__list {
+  .firstList {
     display: flex;
     gap: 40px;
     padding: 0;
@@ -33,7 +36,7 @@
     }
   }
 
-  .Hero__second__list {
+  .secondList {
     display: flex;
     gap: 7px;
     padding: 0;
@@ -44,8 +47,8 @@
       cursor: pointer;
 
       &:hover {
-        background-color: $secondary-color;
-        color: $primary-color;
+        background-color: $active-color_deep;
+        color: $secondary-color;
       }
     }
   }

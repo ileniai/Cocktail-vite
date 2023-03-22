@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Hero = ({ setCategory }) => {
   const onHandleClick = (value) => {
@@ -6,17 +6,17 @@ const Hero = ({ setCategory }) => {
   };
 
   return (
-    <div className="Hero">
-      <h1 className="Hero__title">Drinks 2.0</h1>
-      <ul className="Hero__first__list">
+    <div className={styles.Hero}>
+      <h1 className={styles.title}>Drinks 2.0</h1>
+      <ul className={styles.firstList}>
         <li>🍸 Alcolici</li>
         <li>🍹 Analcolici</li>
         <li>🍷 Vini</li>
         <li>🍺 Birre</li>
         
       </ul>
-      <hr className="Hero__space"/>
-      <ul className="Hero__second__list">
+      <hr className={styles.spaceList}/>
+      <ul className={styles.secondList}>
         <li onClick={() => onHandleClick("Ordinary Drink")}>Ordinary Drink</li>
         <li onClick={() => onHandleClick("Cocktail")}>Cocktail</li>
         <li onClick={() => onHandleClick("Beer")}>Beer</li>

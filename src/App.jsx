@@ -5,7 +5,8 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Content from "./components/content";
 import GeneralModal from "./components/generalModal"
-import "./App.scss";
+import Footer from "./components/footer";
+import styles from "./App.module.scss";
 
 function App() {
 const [cocktailList, setCocktailList] = useState([]);
@@ -18,7 +19,7 @@ const [cocktailList, setCocktailList] = useState([]);
 
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navbar />
       {generalModalContext.isVisible ? (
         <GeneralModal
@@ -32,6 +33,7 @@ const [cocktailList, setCocktailList] = useState([]);
       setCocktailList={setCocktailList}
       setGeneralModalContext={setGeneralModalContext}
       />
+      <Footer />
       </>
       )}
     </div>

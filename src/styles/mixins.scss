@@ -21,3 +21,12 @@
   flex-direction: $flex-direction;
   align-items: $align-items;
 }
+
+@mixin second-flex(
+  $justify-content: center,
+  $align-items:center,
+){
+  display: flex;
+  $justify-content: $justify-content;
+  align-items: $align-items;
+}

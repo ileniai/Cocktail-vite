@@ -18,17 +18,17 @@
         object-fit: cover;
       }
 
-      &__text {
+      .text {
         position: absolute;
         bottom: 0px;
-        width: 70%;
+        width: 75%;
         padding: 10px;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.829);
         box-shadow: 0 0 4px rgba(249, 247, 247, 0.55);
-        transform: translateY(90px);
+        transform: translateY(60px);
         
 
-        .Card__text-title{
+        .titleText{
           @include simple-flex;
           /*display: flex;
           justify-content: center;
@@ -41,7 +41,7 @@
           
         }
 
-        .Card_btn{
+        .btn{
           background: none;
           color: $secondary-color;
           cursor: pointer;

@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+
+    .imgSfondo{
+      width: 100%;
+      height: auto;
+    }
+
+    .hamburger{
+      height: 40px;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      padding:10px;
+      margin: 0;
+      z-index: 1;
+      color:white;
+    }
+  
+    .list {
+      height: 50px;
+      position: absolute;
+      top: 2px;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+      
+      /*display: flex;
+      gap: 20px;
+      padding: 0;
+      list-style-type: none;*/
+  
+      li {
+        position: relative;
+        float: left;
+        width: 140px;
+        text-align: center;
+        list-style: none;
+        /*font-weight: bold;
+        cursor: pointer;*/
+      }
+
+      li a {
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+       }
+
+       .menu{
+        visibility: hidden;
+       }
+
+
+       li a:hover {
+        background-color: $active-color_deep;
+        text-shadow: 0px 0px 1px #FFF;
+        
+       }
+       
+       .section:hover .menu{
+        visibility: visible;
+       }
+       
+    }
+   /* @media screen and (max-width: 800px) {
+      .list{
+        display: none;
+      }
+    }*/
+  
+  }
+
+  

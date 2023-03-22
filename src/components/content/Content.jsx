@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/http";
 import Card from "../card";
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Content = ({data, setCocktailList, setGeneralModalContext}) => {
 
@@ -12,7 +12,7 @@ const Content = ({data, setCocktailList, setGeneralModalContext}) => {
   }, []);
 
   return (
-    <div className="Content">
+    <div className={styles.Content}>
       {data.map((cocktail) => (
         <Card data={cocktail} 
         setGeneralModalContext={setGeneralModalContext}
