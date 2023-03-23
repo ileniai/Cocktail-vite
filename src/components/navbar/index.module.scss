@@ -1,80 +1,141 @@
 @import "../../styles/variables";
 
-.Navbar {
+.Navbar{
+  position: relative;
+  
+
+  .imgSfondo{
+    width: 100%;
+    height: auto;
+  }
+
+  .button{
+    position: absolute;
+    transition: all;
+    width: 65px;
+    height: 65px;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    background: none;
+    color: $secondary-color;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: transform 1.5s;
+
+    &:hover{
+      transform: scaleX(-1);
+    }
+  }
+
+  .list{
+    position: absolute;
+    top: 0px;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 12px;
+    height: 50px;
+    width: 100%;
+    background-color: $primary-color;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
 
-    .imgSfondo{
-      width: 100%;
-      height: auto;
-    }
-
-    .hamburger{
-      height: 40px;
-      position: absolute;
-      top: 0px;
-      right: 0;
-      padding:10px;
-      margin: 0;
-      z-index: 1;
-      color:white;
-    }
+    .listItem{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      text-align: center;
+      list-style-type: none;
   
-    .list {
-      height: 50px;
-      position: absolute;
-      top: 2px;
-      padding: 0;
-      margin: 0;
-      z-index: 1;
-      
-      /*display: flex;
-      gap: 20px;
-      padding: 0;
-      list-style-type: none;*/
-  
-      li {
-        position: relative;
-        float: left;
-        width: 140px;
-        text-align: center;
-        list-style: none;
-        /*font-weight: bold;
-        cursor: pointer;*/
-      }
-
-      li a {
+      a {
+        width: 120px;
         background-color: $primary-color;
         color: $secondary-color;
         padding: 15px 20px;
         text-decoration: none;
         display: block;
-       }
 
-       .menu{
-        visibility: hidden;
-       }
-
-
-       li a:hover {
-        background-color: $active-color_deep;
-        text-shadow: 0px 0px 1px #FFF;
+        &:hover {
         
-       }
-       
-       .section:hover .menu{
+          background-color: $active-color_deep;
+          text-shadow: 0px 0px 1px #FFF;
+         }
+        
+      }
+    }
+    .section{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      text-align: center;
+      list-style-type: none;
+      
+      .section1{
+        width: 120px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+        
+          background-color: $active-color_deep;
+          text-shadow: 0px 0px 1px #FFF;
+         }
+      }
+
+      .menu{
+        position: absolute;
+        top:50px;
+        width: 77px;
+        visibility: hidden;
+
+  
+      .menuListItem{
+        list-style-type: none;
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+        margin-left: -40px;
+        cursor: pointer;
+  
+          &:hover {
+          
+            background-color: $active-color_deep;
+            text-shadow: 0px 0px 1px #FFF;
+           }
+  
+          & a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $secondary-color;
+            text-decoration: none;
+          }
+        }   
+      }
+      &.section:hover .menu{
         visibility: visible;
        }
-       
-    }
-   /* @media screen and (max-width: 800px) {
-      .list{
-        display: none;
-      }
-    }*/
-  
+    }   
   }
+}
+
+    @media screen and (min-width: 676px) {
+      .list {
+        height: 10vh;
+        width: 90px;
+      }
+    }
+  
 
   
