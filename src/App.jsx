@@ -27,6 +27,7 @@ const [cocktailList, setCocktailList] = useState([]);
 
   const [ordinationIsVisibile, setOrdinationVisibility] = useState(false);
 
+
   const [generalModalContext, setGeneralModalContext] = useState({
     isVisible: false,
     payload: {},
@@ -80,5 +81,6 @@ const [cocktailList, setCocktailList] = useState([]);
     </div>
   );
 }
+
 
 export default App;

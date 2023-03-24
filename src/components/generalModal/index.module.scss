@@ -4,12 +4,12 @@
 .GeneralModal {
     @include flex-container;
     position: fixed;
-    width: 550px;
-    height: 465px;
+    width: 450px;
+    height: 365px;
     background-color: $secondary-color;
     border-radius: 18px;
     top: 230px;
-    left: calc(48% - 250px);
+    left: calc(50% - 220px);
 
     .text {
     @include flex-container(column, center, center);
@@ -26,47 +26,56 @@
    .categoryName{
     font-size: 1.3rem;
     font-weight: bold;
-
+    margin-top: 0;
    }
 
    .typeGlass{
     font-weight: bold;
-   }
-
-   .subtitle{
-    display: flex;
-    justify-content: space-evenly;
+    margin-top: 0;
    }
 
    .textList{
-      width: 100%;
-      @include flex-container(row, space-around);
+    width: 100%;
+    @include flex-container(row, space-around);
+    
 
-      .textListUl{
-        width: 100px;
-        padding-left:0px;
-        justify-content: space-evenly;
-      }
-      .textListUl2{
-        width: 180px;
-        height: 140px;
-        justify-content: space-evenly;
-        padding-left:16px;
-      }
+    .textListUl{
+      
+      width: 100px;
+      padding-left:3px;
+      justify-content: flex-start;
+      
+    }
+
+    .subtitle{
+      
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 0;
+    }
+
+    .textListUl2{
+      width: 180px;
+      height: 140px;
+      justify-content: space-evenly;
+      padding-left:16px;
+      margin-top: 0;
 
       li { 
         padding: 2px;
         list-style-type: none;
-      }     
+      } 
     }
+         
   }
+}
 
   .btnClose{
     border:none;
     background:none;
     position: absolute;
-    top:10px;
-    left: 10px;
+    top:8px;
+    left: 8px;
     font-size: 1.3rem;
     cursor: pointer;
     transition: transform 1.5s;
@@ -83,7 +92,7 @@
 
     img { 
       width: 100%;
-      height: 465px;
+      height: 365px;
       border-top-right-radius: 18px;
       border-bottom-right-radius: 18px;
       object-fit: cover;

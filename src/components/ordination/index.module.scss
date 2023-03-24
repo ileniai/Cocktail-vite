@@ -20,18 +20,19 @@
   .content {
     position: fixed;
     top: 27vh;
-    left: 10%;
-    height: 55vh;
-    width: 80%;
+    left: 20%;
+    height: 400px;
+    width: 70%;
     border-radius: 12px;
-    background-color: $impression-color;
+    background-color: $gradient-color;
+    background-image: $gradient-background;
     color:$primary-color;
 
     .btnClose{
       width: 50px;
       height: 25px;
       border: none;
-      background: none;
+      background: $secondary-color;
       box-shadow: 0 0 4px rgba(42, 41, 41, 0.55);
       cursor: pointer;
     }
@@ -43,8 +44,7 @@
       align-items: center;
       gap: 10px;
       padding: 20px 30px;
-
-     
+      font-weight: bold;
 
       input {
         width: 260px;
@@ -54,5 +54,9 @@
         cursor: pointer;
       }
     }
+  }
+
+  .contentFadeOut {
+    animation: fadeOut 1.35s ease 0s;
   }
 }
