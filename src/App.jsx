@@ -31,9 +31,12 @@ const [cocktailList, setCocktailList] = useState([]);
   const [generalModalContext, setGeneralModalContext] = useState({
     isVisible: false,
     payload: {},
+    positionList:null,
   });
 
- 
+  const onHandleClosePopUp = ()=>{
+    setPopupVisibility(false)
+  }
 
   return (
     <div className={styles.App}>
@@ -43,13 +46,16 @@ const [cocktailList, setCocktailList] = useState([]);
       
       {generalModalContext.isVisible ? (
         <GeneralModal
-          data={generalModalContext.payload}
+          data={generalModalContext}
           setGeneralModalContext={setGeneralModalContext}
+          filteredList={filteredList(cocktailList, "strCategory", category)}
         />
       ) : (
         <>
         {isPopupVisibile && (
         <Popup>
+          <button onClick={onHandleClosePopUp}
+          className={styles.btnClosePopup}>x</button>
           <h3 className={styles.titlePopup}>Grazie per aver prenotato con noi!</h3>
           <p>Il tavolo a nome {" "}
           <strong>{surname}</strong> <strong> è stato prenotato per giorno{" "} 

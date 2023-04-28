@@ -4,6 +4,19 @@
     background-color: $primary-color;
     color: $secondary-color;
 
+    .btnClosePopup{
+      border: none;
+      margin-top:10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s;
+
+    &:hover{
+      transform: scale(1.2);
+      color:rgb(124, 12, 12);
+    }
+    }
+
     .titlePopup{
       text-align: center;
       color: $primary-color;

@@ -78,10 +78,10 @@
     left: 8px;
     font-size: 1.3rem;
     cursor: pointer;
-    transition: transform 1.5s;
+    transition: all 0.2s;
 
     &:hover{
-      transform: scaleX(-1);
+      transform: scale(1.2);
     }
 
   }

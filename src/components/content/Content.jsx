@@ -13,8 +13,8 @@ const Content = ({data, setCocktailList, setGeneralModalContext}) => {
 
   return (
     <div className={styles.Content}>
-      {data.map((cocktail) => (
-        <Card data={cocktail} 
+      {data.map((cocktail, i) => (
+        <Card data={{...cocktail, positionList:i}} 
         setGeneralModalContext={setGeneralModalContext}
          key={cocktail.idDrink}/>
       ))}

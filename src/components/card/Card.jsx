@@ -7,6 +7,7 @@ const Card = ({ data, setGeneralModalContext}) => {
     ...prev,
     payload: data,
     isVisible: true,
+    positionList:data.positionList,
   }));
 
   return (
