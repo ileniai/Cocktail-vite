@@ -53,7 +53,6 @@ const Hero = ({ setCategory }) => {
         <li onClick={() => onHandleClick("Shot")}>Shot</li>
         <li onClick={() => onHandleClick("Punch / Party Drink")}>Punch</li>
         <li onClick={() => onHandleClick("Coffee / Tea")}>Coffee</li>
-        <li onClick={() => onHandleClick("Other / Unknown")}>Other</li>
       </SecondList>
     </HeroWrapper>
   )

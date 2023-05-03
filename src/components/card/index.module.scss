@@ -4,6 +4,56 @@
 .Card{
    @include simple-flex;
     position: relative;
+    width: 120px;
+    height: 170px;
+    margin-top: 40px;
+    box-shadow: 0 0 4px rgba(249, 247, 247, 0.55);
+    
+    img {
+        width: 120px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0px;
+        width: 65%;
+        padding: 7px;
+        background-color: rgba(0, 0, 0, 0.829);
+        box-shadow: 0 0 4px rgba(249, 247, 247, 0.55);
+        transform: translateY(60px);
+        
+
+        .titleText{
+          @include simple-flex;
+          font-size: 0.9rem;
+          text-align: center;
+          
+        }
+    
+        ul {
+          padding-left: 10px;
+          font-size: 0.6rem;
+          
+        }
+
+        .btn{
+          background: none;
+          color: $secondary-color;
+          cursor: pointer;
+          margin-top: 15px;
+          width: 60px;
+          height: 20px;
+          font-size: 0.5rem;
+        }
+      }
+}
+
+@media screen and (min-width: 1000px) {
+  .Card{
+   @include simple-flex;
+    position: relative;
     /*display: flex;
     flex-direction: column;
     align-items: center;*/
@@ -30,15 +80,14 @@
 
         .titleText{
           @include simple-flex;
-          /*display: flex;
-          justify-content: center;
-          align-items: center;*/
+          font-size: 1.5rem;
+          text-align: center;
           
         }
     
         ul {
           padding-left: 18px;
-          
+          font-size: 1rem;
         }
 
         .btn{
@@ -46,6 +95,12 @@
           color: $secondary-color;
           cursor: pointer;
           margin-top: 15px;
+          width: 90px;
+          height: 25px;
+          font-size: 0.9rem;
+          text-align: center;
+          margin-left: 10%;
         }
       }
+}
 }

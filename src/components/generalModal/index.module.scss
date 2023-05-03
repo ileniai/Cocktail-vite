@@ -4,6 +4,128 @@
 .GeneralModal {
     @include flex-container;
     position: fixed;
+    width: 300px;
+    height: 300px;
+    background-color: $secondary-color;
+    border-radius: 18px;
+    top: 230px;
+    left: calc(50% - 40%);
+
+    .text {
+    @include flex-container(column, center, center);
+    width: 45%;
+    height: 100%;
+    padding: 0 15px;
+    color:$primary-color;
+
+    .titleText{
+    margin-top: 80px;
+    font-family: $first_fonts;
+    font-size: 1.7rem;
+    text-align: center;
+   }
+
+   .categoryName{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+   }
+
+   .typeGlass{
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 0.9rem;
+   }
+
+   .textList{
+    width: 100%;
+    @include flex-container(row, space-around);
+    font-size: 0.6rem;
+    
+
+    .textListUl{
+      width: 100px;
+      padding-left:3px;
+      justify-content: flex-start;
+    }
+
+    .subtitle{
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 0;
+    }
+
+    .textListUl2{
+      width: 180px;
+      height: 140px;
+      justify-content: space-evenly;
+      padding-left:15px;
+      margin-top: 0;
+
+      li { 
+        padding: 2px;
+        list-style-type: none;
+      } 
+    }
+         
+  }
+}
+
+  .btnClose{
+    border:none;
+    background:none;
+    position: absolute;
+    top:8px;
+    left: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover{
+      transform: scale(1.2);
+      color:rgba(157, 25, 25, 0.849);
+    }
+
+  }
+
+  .image {
+    width: 50%;
+    height: 99%;
+
+    img { 
+      width: 100%;
+      height: 300px;
+      border-top-right-radius: 18px;
+      object-fit: cover;
+    }
+
+
+    .carouselBtn button {
+      padding: 22px 0;
+      width: 50%;
+      height: 100%;
+      border: 0;
+      background-color: $active-color;
+      color: $secondary-color;
+      font-weight: bold;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: transform 0.35s;
+      transform: translateY(-61px);
+      
+
+      &:hover {
+        background-color: $active-color_deep;
+        transform: scale(1.1) translateY(-57.5px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .GeneralModal {
+    @include flex-container;
+    position: fixed;
     width: 450px;
     height: 365px;
     background-color: $secondary-color;
@@ -35,8 +157,10 @@
    }
 
    .textList{
+
     width: 100%;
     @include flex-container(row, space-around);
+    font-size: 0.9rem;
     
 
     .textListUl{
@@ -82,6 +206,7 @@
 
     &:hover{
       transform: scale(1.2);
+      color:rgba(157, 25, 25, 0.849);
     }
 
   }
@@ -109,7 +234,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: transform 0.35s;
-      transform: translateY(-63px);
+      transform: translateY(-61px);
       
 
       &:hover {
@@ -118,4 +243,5 @@
       }
     }
   }
+}
 }

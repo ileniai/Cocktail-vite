@@ -12,7 +12,7 @@ const Navbar = ({ setOrdinationVisibility }) =>{
           <button onClick={onHandleClick} className={styles.button}>prenota</button>
         <ul className={styles.list}>
           <li className={styles.listItem}><a href="#">Home</a></li>
-          <li className={styles.listItem}><a href="#">Contattami</a></li>
+          <li className={styles.listItem}><a href="#">Contatti</a></li>
           <li className={styles.section}><a className={styles.section1} href="#">Sezioni</a>
         <ul className={styles.menu}>
           <li className={styles.menuListItem}><a href="#">Distribuzione</a></li>
